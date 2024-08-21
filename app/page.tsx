@@ -6,15 +6,17 @@ import Hero from "./components/Hero";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import styled from "styled-components";
+import { GlobalStyles } from "../styles/globals";
 
 const Home = () => {
   return (
-    <Container>
+    <>
+      <GlobalStyles />
       <Navbar />
       <Hero />
       <Content />
       <Footer />
-    </Container>
+    </>
   );
 };
 

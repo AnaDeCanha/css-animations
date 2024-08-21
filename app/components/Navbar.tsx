@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import GitHub from "@mui/icons-material/GitHub";
 import { colors } from "../../styles/globals";
 
 const Navbar = () => {
@@ -21,16 +22,13 @@ const Navbar = () => {
       </LogoWrapper>
       <NavLinks>
         <li>
-          <Link href="#home">Home</Link>
-        </li>
-        <li>
-          <Link href="#about">About</Link>
-        </li>
-        <li>
-          <Link href="#services">Services</Link>
-        </li>
-        <li>
-          <Link href="#contact">Contact</Link>
+          <Link
+            href="https://github.com/AnaDeCanha?tab=repositories"
+            target="_blank"
+          >
+            <span>Check other projects</span>
+            <GitHub />
+          </Link>
         </li>
       </NavLinks>
     </Nav>
@@ -59,10 +57,11 @@ const NavLinks = styled.ul`
 
   a {
     color: ${colors.text};
-    text-decoration: none;
+    display: flex;
+    align-items: center;
 
-    &:hover {
-      color: ${colors.accent};
+    span {
+      margin-right: 10px;
     }
   }
 `;
