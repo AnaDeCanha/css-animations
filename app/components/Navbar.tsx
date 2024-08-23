@@ -10,7 +10,7 @@ import { colors } from "../../styles/globals";
 const Navbar = () => {
   return (
     <Nav>
-      <LogoWrapper>
+      <>
         <Link href="/">
           <Image
             src="/mini-logo.png"
@@ -19,7 +19,7 @@ const Navbar = () => {
             height={40}
           />
         </Link>
-      </LogoWrapper>
+      </>
       <NavLinks>
         <li>
           <Link
@@ -45,18 +45,10 @@ const Nav = styled.nav`
   color: ${colors.text};
 `;
 
-const LogoWrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 const NavLinks = styled.ul`
   list-style: none;
-  display: flex;
-  gap: 15px;
 
   a {
-    color: ${colors.text};
     display: flex;
     align-items: center;
 
